@@ -8,6 +8,11 @@ class Pokemon
     @id = id
   end
   
-  def self.save()
+  def self.save(name, type, db)
+    Pokemon.new(name: name, type: type, db: db)
+    sql = <<-SQL
+      INSERT INTO pokemon 
+    SQL
+  end
   
 end
